@@ -21,6 +21,15 @@ public class TextMaximum {
             max = num3;
         return max;
     }
+    public String checkMaximumString(String str1, String str2, String str3) {
+        String max = str1;
+        if (str2.compareTo(max) > 0)
+            max = str2;
+
+        if (str3.compareTo(max) > 0)
+            max = str3;
+        return max;
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to find the maximum problem using generics");
@@ -29,5 +38,7 @@ public class TextMaximum {
         System.out.println(obj.checkMaximumInteger(10,20,30));
         System.out.println("The maximum of the three Float is:- ");
         System.out.println(obj.checkMaximumFloat(10.2f, 20.54f, 30.6f));
+        System.out.println("The maximum of the three String is:- ");
+        System.out.println(obj.checkMaximumString("Apple", "Peach", "Banana"));
     }
 }
